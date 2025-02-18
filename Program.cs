@@ -18,7 +18,11 @@ internal class Program
             int age = Convert.ToInt32(Console.ReadLine());
             example.ValidateAge(age);
         }
-        catch (InvalidAgeException ex) {
+        catch (InvalidAgeException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        catch(ArgumentOutOfRangeException ex) {
             Console.WriteLine(ex.Message);
         }
 
@@ -36,6 +40,24 @@ internal class Program
         {
             Console.WriteLine(ex.Message);
         }
+
+        //handled Exception for empty list
+
+        example.EmptyList();
+
+        //key not found exception
+        example.KeyNotFoundExep();
+
+        //handle Argumenet null exception
+        try
+        {
+            string msg = null;
+            example.PrintMassege(msg);
+        }
+        catch (ArgumentNullException ex) { 
+            Console.WriteLine( "error :" +ex.Message);
+        }
+
 
     }
 }
