@@ -59,5 +59,7 @@ internal class Program
         }
 
 
+        CustomExceptionDemo exampleDemo = new CustomExceptionDemo();
+        exampleDemo.ValidateEmpId();
     }
 }
