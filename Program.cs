@@ -22,7 +22,8 @@ internal class Program
         {
             Console.WriteLine(ex.Message);
         }
-        catch(ArgumentOutOfRangeException ex) {
+        catch (ArgumentOutOfRangeException ex)
+        {
             Console.WriteLine(ex.Message);
         }
 
@@ -54,12 +55,17 @@ internal class Program
             string msg = null;
             example.PrintMassege(msg);
         }
-        catch (ArgumentNullException ex) { 
-            Console.WriteLine( "error :" +ex.Message);
+        catch (ArgumentNullException ex)
+        {
+            Console.WriteLine("error :" + ex.Message);
         }
 
 
         CustomExceptionDemo exampleDemo = new CustomExceptionDemo();
         exampleDemo.ValidateEmpId();
+
+        //Dta Annotation implementation 
+        DataAnnotationDemo demo = new DataAnnotationDemo();
+        demo.UserDetails();
     }
 }
