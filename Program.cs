@@ -4,68 +4,71 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        ExceptionExa example = new ExceptionExa();
+        //ExceptionExa example = new ExceptionExa();
 
-        example.DivideByZero();
+        //example.DivideByZero();
 
-        example.NullReferenceExcep();
+        //example.NullReferenceExcep();
 
-        // check valid age 
+        //// check valid age 
 
-        try
-        {
-            Console.WriteLine("Enter your age :");
-            int age = Convert.ToInt32(Console.ReadLine());
-            example.ValidateAge(age);
-        }
-        catch (InvalidAgeException ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
-        catch (ArgumentOutOfRangeException ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
+        //try
+        //{
+        //    Console.WriteLine("Enter your age :");
+        //    int age = Convert.ToInt32(Console.ReadLine());
+        //    example.ValidateAge(age);
+        //}
+        //catch (InvalidAgeException ex)
+        //{
+        //    Console.WriteLine(ex.Message);
+        //}
+        //catch (ArgumentOutOfRangeException ex)
+        //{
+        //    Console.WriteLine(ex.Message);
+        //}
 
-        //insufficient fund custom exception
+        ////insufficient fund custom exception
 
-        BankAccount bankAccount = new BankAccount(3000);
+        //BankAccount bankAccount = new BankAccount(3000);
 
-        try
-        {
-            Console.WriteLine("Enter amount to withdraw :");
-            double amount = Convert.ToDouble(Console.ReadLine());
-            bankAccount.Withdraw(amount);
-        }
-        catch (InsufficientFundsException ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
+        //try
+        //{
+        //    Console.WriteLine("Enter amount to withdraw :");
+        //    double amount = Convert.ToDouble(Console.ReadLine());
+        //    bankAccount.Withdraw(amount);
+        //}
+        //catch (InsufficientFundsException ex)
+        //{
+        //    Console.WriteLine(ex.Message);
+        //}
 
-        //handled Exception for empty list
+        ////handled Exception for empty list
 
-        example.EmptyList();
+        //example.EmptyList();
 
-        //key not found exception
-        example.KeyNotFoundExep();
+        ////key not found exception
+        //example.KeyNotFoundExep();
 
-        //handle Argumenet null exception
-        try
-        {
-            string msg = null;
-            example.PrintMassege(msg);
-        }
-        catch (ArgumentNullException ex)
-        {
-            Console.WriteLine("error :" + ex.Message);
-        }
+        ////handle Argumenet null exception
+        //try
+        //{
+        //    string msg = null;
+        //    example.PrintMassege(msg);
+        //}
+        //catch (ArgumentNullException ex)
+        //{
+        //    Console.WriteLine("error :" + ex.Message);
+        //}
 
 
-        CustomExceptionDemo exampleDemo = new CustomExceptionDemo();
-        exampleDemo.ValidateEmpId();
+        //CustomExceptionDemo exampleDemo = new CustomExceptionDemo();
+        //exampleDemo.ValidateEmpId();
 
         //Dta Annotation implementation 
         DataAnnotationDemo demo = new DataAnnotationDemo();
-        demo.UserDetails();
+       // demo.UserDetails();
+
+        demo.CustomerOrderDetails();
     }
+
 }

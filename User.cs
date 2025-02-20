@@ -17,7 +17,7 @@ namespace exceptionDemo
         public int Age { get; set; }
 
         [EmailAddress(ErrorMessage = "Provide valid email input")]
-        [RegularExpression("^[a-z0-9]+@[a-z]+\\.+[a-z]{2,}$")]
+        [RegularExpression(@"^[a-z0-9]+@[a-z]+\.+[a-z]{2,}$")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Password is required")]
